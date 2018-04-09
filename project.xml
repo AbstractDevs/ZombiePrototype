@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+    <meta title="ZombiePrototype" package="com.abstractdevs.ZombiePrototype" version="1.0.0" company="AbstractDevs" />
+    <app main="Main" path="bin" file="ZombiePrototype" />
+
+    <source path="src" />
+
+    <haxelib name="lime" />
+    <haxelib name="openfl" />
+
+    <!--<assets path="assets" rename="assets" />-->
+
+</project>
