@@ -2,13 +2,13 @@ package;
 
 import openfl.display.Sprite;
 import openfl.events.Event;
-
+import litekit.platform.openfl.input.OpenFLInputListener;
 import game.Global;
 import game.defs.GameStates;
 
 class Main extends Sprite 
 {
-    public function new () 
+    public function new ()
     {
         super();
         
@@ -21,6 +21,7 @@ class Main extends Sprite
 
         Global.init();
         GameStates.init();
+        OpenFLInputListener.init(Global.event);
 
         Global.state.setState(GameState.INPUT_TEST);
     }

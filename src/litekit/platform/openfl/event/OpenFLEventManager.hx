@@ -1,4 +1,4 @@
-package litekit.platform.openfl;
+package litekit.platform.openfl.event;
 
 import litekit.event.SimpleEventManager;
 
@@ -16,7 +16,7 @@ class OpenFLEventManager extends SimpleEventManager
     {
         super.init();
 
-        Lib.current.stage.addEventListener(Event.ENTER_FRAME, onEnterFrame)
+        Lib.current.stage.addEventListener(Event.ENTER_FRAME, onEnterFrame);
     }
 
     private function onEnterFrame(e:Event):Void

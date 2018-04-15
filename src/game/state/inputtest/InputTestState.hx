@@ -1,8 +1,11 @@
 package game.state.inputTest;
 
+import game.Global;
 import game.defs.GameStates;
 import game.state.BaseGameState;
+import litekit.event.InputEvent;
 import litekit.state.State;
+
 
 class InputTestState extends BaseGameState
 {
@@ -17,6 +20,8 @@ class InputTestState extends BaseGameState
 
         trace("Logging - Entered TestState");
 
+        Global.event.addListener(InputEvent.KEY_DOWN, onKeyPress);
+
         return params;
     }
 
@@ -25,5 +30,10 @@ class InputTestState extends BaseGameState
         params = super.onExit(params);
 
         return params;
+    }
+
+    private function onKeyPress(e:InputEvent):Void
+    {
+        trace('Pressed key: ${e.key}');
     }
 }

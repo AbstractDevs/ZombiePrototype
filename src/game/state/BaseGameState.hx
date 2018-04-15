@@ -5,7 +5,7 @@ import litekit.state.State;
 
 class BaseGameState extends SimpleState
 {
-    public function new(id:StateId)
+    private function new(id:StateId)
     {
         super(id, onEnter, onExit);
     }

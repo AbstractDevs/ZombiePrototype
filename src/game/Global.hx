@@ -4,7 +4,7 @@ import litekit.event.PlatformEventManager;
 import litekit.state.SimpleStateMachine;
 
 #if openfl
-import litekit.platform.openfl.OpenFLEventManager;
+import litekit.platform.openfl.event.OpenFLEventManager;
 #end
 
 class Global
@@ -18,6 +18,7 @@ class Global
         
         #if openfl
         event = new OpenFLEventManager();
+        event.init();
         #end
     }
 }

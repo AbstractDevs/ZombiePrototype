@@ -1,5 +1,7 @@
 package game.state.inputtest;
 
+import game.Global;
+import litekite.state.StateParams;
 import openfl.display.Sprite;
 
 class InputTestScene
@@ -13,4 +15,12 @@ class InputTestScene
         sprite.graphics.drawRect(0, 0, 900, 900);
         sprite.graphics.endFill();
     }
+
+    override function onEnter(params:StateParams):StateParams
+    {
+
+        return params;
+    }
+
+    private function onInput(e:input)
 }
