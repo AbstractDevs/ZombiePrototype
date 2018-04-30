@@ -6,9 +6,13 @@ import game.state.BaseGameState;
 import litekit.event.InputEvent;
 import litekit.state.State;
 
+using litekit.component.EntityComponentSystem;
+
 
 class InputTestState extends BaseGameState
 {
+    private var m_player:Entity;
+
     public function new()
     {
         super(GameState.INPUT_TEST);

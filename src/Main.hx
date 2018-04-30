@@ -23,7 +23,6 @@ class Main extends Sprite
         GameStates.init();
         OpenFLInputListener.init(Global.event);
 
-        Global.state.setState(GameState.INPUT_TEST);
+        Global.state.setState(GameState.MAP_TEST);
     }
-
 }
