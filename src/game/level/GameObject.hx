@@ -7,6 +7,7 @@ typedef GameObjectParams = {
     var args:Array<Dynamic>;
 };
 
+@:keepSub
 class GameObject extends BaseComponent
 {
     public var worldX(default, null):Float = 0;

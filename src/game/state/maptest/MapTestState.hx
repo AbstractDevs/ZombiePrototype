@@ -3,7 +3,6 @@ package game.state.maptest;
 import game.Global;
 import game.defs.GameStates;
 import game.level.GameLevel;
-import game.level.GameTile;
 import game.level.GameLevelEvent;
 import game.level.GameObject;
 import game.state.BaseGameState;
@@ -31,7 +30,7 @@ class MapTestState extends BaseGameState
 
         var testParams:GameObjectParams = {
             type : "game.level.GameTile",
-            args : []
+            args : [null]
         };
         m_testLevel.createGameObj(testParams);
 
@@ -51,10 +50,9 @@ class MapTestState extends BaseGameState
     private function onObjectCreated(e:GameLevelEvent):Void
     {
         var obj = e.gameObj;
-        trace(Std.is(obj, GameTile));
+        trace(obj);
         if(Std.is(obj, DisplayObject))
         {
-            trace("Adding an object to display");
             Global.display.attach(cast obj);
         }
     }

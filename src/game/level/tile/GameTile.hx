@@ -1,4 +1,4 @@
-package game.level;
+package game.level.tile;
 
 import game.level.GameObject;
 import litekit.display.DisplayObject;

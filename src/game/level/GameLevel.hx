@@ -19,6 +19,8 @@ class GameLevel
     public function createGameObj(params:GameObjectParams):GameObject
     {
         var obj:GameObject = GameObjectFactory.createObject(params);
+        trace(params.type);
+        trace(obj);
 
         var event = new GameLevelEvent(GameLevelEvent.OBJECT_CREATED)
             .setObject(obj);
